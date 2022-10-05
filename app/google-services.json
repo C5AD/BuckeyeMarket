@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "130130602215",
+    "project_id": "buckeyemarket-928ed",
+    "storage_bucket": "buckeyemarket-928ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130130602215:android:7ddc84a078d18974921a42",
+        "android_client_info": {
+          "package_name": "com.example.buckeyemarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130130602215-7bc2sc3s89su6567beaipnpjlfv798ep.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.buckeyemarket",
+            "certificate_hash": "11048688481c29dc5c58468b20dfc52779f14a4b"
+          }
+        },
+        {
+          "client_id": "130130602215-dn2htrluclah7d7re7p2lman6m0lra9m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCUhCK5I5eqEzD6Mtd9OOLG3W-RcglIt7M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130130602215-dn2htrluclah7d7re7p2lman6m0lra9m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
