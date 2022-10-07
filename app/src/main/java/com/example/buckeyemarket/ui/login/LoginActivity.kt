@@ -1,6 +1,7 @@
 package com.example.buckeyemarket.ui.login
 
 import android.app.Activity
+import android.content.Intent
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
@@ -15,6 +16,7 @@ import android.widget.Toast
 import com.example.buckeyemarket.databinding.ActivityLoginBinding
 
 import com.example.buckeyemarket.R
+import com.example.buckeyemarket.SignUpActivity
 
 class LoginActivity : AppCompatActivity() {
 
@@ -26,12 +28,19 @@ class LoginActivity : AppCompatActivity() {
 
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        val register = binding.btnRegister
         val username = binding.username
         val password = binding.password
         val login = binding.login
         val loading = binding.loading
 
+        if (register != null) {
+            register.setOnClickListener {
+                val intent = Intent(this, SignUpActivity::class.java) // Declare intent variable
+                startActivity(intent)
+
+            }
+        }
         loginViewModel = ViewModelProvider(this, LoginViewModelFactory())
             .get(LoginViewModel::class.java)
 
