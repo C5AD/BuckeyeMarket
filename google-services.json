@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "443618379093",
+    "project_id": "buckeyemarket-e94bc",
+    "storage_bucket": "buckeyemarket-e94bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:443618379093:android:bb50fa08aada5af43e1bdc",
+        "android_client_info": {
+          "package_name": "com.example.buckeyemarket"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "443618379093-ej7p26hp16mhqi5ehhv1oqrphk33k104.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeQ2f8tIJjV0P7fpTomUsNrLGfh3eGeLQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "443618379093-ej7p26hp16mhqi5ehhv1oqrphk33k104.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
