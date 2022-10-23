@@ -1,4 +1,4 @@
-package com.example.buckeyemarket
+package com.example.buckeyemarket.ui.item
 
 import androidx.multidex.MultiDexApplication
 import com.google.firebase.auth.FirebaseAuth

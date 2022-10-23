@@ -1,4 +1,4 @@
-package com.example.buckeyemarket
+package com.example.buckeyemarket.ui.signup
 
 import android.content.Intent
 import android.os.Bundle
@@ -12,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.example.buckeyemarket.R
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
 import com.example.buckeyemarket.ui.login.LoginActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult

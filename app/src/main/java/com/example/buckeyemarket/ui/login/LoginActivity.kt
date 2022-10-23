@@ -1,26 +1,17 @@
 package com.example.buckeyemarket.ui.login
 
-import android.app.Activity
 import android.content.Intent
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.View
-import android.view.inputmethod.EditorInfo
 import android.widget.EditText
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import com.example.buckeyemarket.MainActivity
-import com.example.buckeyemarket.databinding.ActivityLoginBinding
+import com.example.buckeyemarket.ui.item.MainActivity
 
 import com.example.buckeyemarket.R
-import com.example.buckeyemarket.SignUpActivity
-import com.example.buckeyemarket.ThreeFragment
+import com.example.buckeyemarket.databinding.ActivityLoginBinding
+import com.example.buckeyemarket.ui.signup.SignUpActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
@@ -28,6 +19,7 @@ import com.google.firebase.auth.FirebaseAuth
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
+    private lateinit var binding: ActivityLoginBinding
 
     companion object {
         private const val TAG = "LoginActivity"
@@ -35,12 +27,19 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityLoginBinding.inflate(layoutInflater)
+
         setContentView(R.layout.activity_login)
         mAuth = FirebaseAuth.getInstance()
         findViewById<View>(R.id.login).setOnClickListener(onClickListener)
+
+        binding.btnRegister?.setOnClickListener {
+            val intent = Intent(this, SignUpActivity::class.java) // Declare intent variable
+            startActivity(intent)
+        }
     }
 
-    var onClickListener =
+    private var onClickListener =
         View.OnClickListener { v ->
             when (v.id) {
                 R.id.login -> login()
@@ -74,4 +73,4 @@ class LoginActivity : AppCompatActivity() {
 
             }
         }
-    }
+}

@@ -1,21 +1,20 @@
-package com.example.buckeyemarket
-
+package com.example.buckeyemarket.ui.item
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.buckeyemarket.databinding.FragmentThreeBinding
+import com.example.buckeyemarket.databinding.FragmentTwoBinding
 
 
-class ThreeFragment : Fragment() {
+class TwoFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return FragmentThreeBinding.inflate(inflater, container, false).root
+        return FragmentTwoBinding.inflate(inflater, container, false).root
     }
+
 }

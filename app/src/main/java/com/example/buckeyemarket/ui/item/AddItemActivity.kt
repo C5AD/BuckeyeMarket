@@ -1,4 +1,4 @@
-package com.example.buckeyemarket
+package com.example.buckeyemarket.ui.item
 
 import android.content.Intent
 import android.net.Uri
@@ -12,6 +12,7 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+import com.example.buckeyemarket.R
 import com.example.buckeyemarket.databinding.ActivityAddItemBinding
 import com.google.firebase.storage.StorageReference
 import java.io.File
@@ -31,9 +32,8 @@ class AddItemActivity : AppCompatActivity() {
         binding = ActivityAddItemBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setSupportActionBar(binding.addToolbar)
-
-
     }
+
     val requestLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if (it.resultCode == android.app.Activity.RESULT_OK) {
             Glide
