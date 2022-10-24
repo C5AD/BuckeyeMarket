@@ -33,7 +33,7 @@ class AddItemActivity : AppCompatActivity() {
         setContentView(binding.root)
         setSupportActionBar(binding.addToolbar)
     }
-
+    // Launcher to get the image from the user and show it into add_image_view
     val requestLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
         if (it.resultCode == android.app.Activity.RESULT_OK) {
             Glide
@@ -49,7 +49,7 @@ class AddItemActivity : AppCompatActivity() {
             }
         }
     }
-
+    // function to set the image and image path
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId === R.id.menu_add_item) {
             val intent = Intent(Intent.ACTION_PICK)
@@ -69,15 +69,18 @@ class AddItemActivity : AppCompatActivity() {
         }
         return super.onOptionsItemSelected(item)
     }
+
+    // Create the header menu for additemActivity
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_add, menu)
         return super.onCreateOptionsMenu(menu)
     }
-
+    // Function to convert the date in yyyy-MM-dd format
     private fun dateToString(date: Date): String {
         val format = SimpleDateFormat("yyyy-MM-dd")
         return format.format(date)
     }
+    // Function to save the contents that the user want to upload into Firebase database
     private fun saveStore() {
 
         val data = mapOf(
@@ -92,7 +95,7 @@ class AddItemActivity : AppCompatActivity() {
         }
 
     }
-
+    // Function to save the image into Firebase storage
     private fun uploadImage(docId: String) {
         val storage = MyApplication.storage
 

@@ -12,13 +12,11 @@ import com.example.buckeyemarket.ui.item.MainActivity
 
 import com.example.buckeyemarket.R
 import com.example.buckeyemarket.databinding.ActivityLoginBinding
+import com.example.buckeyemarket.ui.item.MyApplication
 import com.example.buckeyemarket.ui.signup.SignUpActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DataSnapshot
-import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.DocumentSnapshot
 import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
@@ -64,6 +62,7 @@ class LoginActivity : AppCompatActivity() {
                     // If authenticate successful run the main activity
                     if (task.isSuccessful && mAuth.currentUser?.isEmailVerified == true) {
                         Log.d(TAG, "signInWithEmail:success")
+                        MyApplication.email = email
                         val intent= Intent(this, MainActivity::class.java)
                         startActivity(intent)
                     }
