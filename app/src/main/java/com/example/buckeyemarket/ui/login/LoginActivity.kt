@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.util.Log
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.buckeyemarket.ui.item.MainActivity
@@ -15,11 +16,16 @@ import com.example.buckeyemarket.ui.signup.SignUpActivity
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.DocumentSnapshot
+import com.google.firebase.firestore.FirebaseFirestore
 
 class LoginActivity : AppCompatActivity() {
 
     private lateinit var mAuth: FirebaseAuth
     private lateinit var binding: ActivityLoginBinding
+    lateinit var db: FirebaseFirestore
 
     companion object {
         private const val TAG = "LoginActivity"
@@ -27,16 +33,15 @@ class LoginActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
-
-        setContentView(R.layout.activity_login)
         mAuth = FirebaseAuth.getInstance()
-        findViewById<View>(R.id.login).setOnClickListener(onClickListener)
+        setContentView(R.layout.activity_login)
 
-        binding.btnRegister?.setOnClickListener {
-            val intent = Intent(this, SignUpActivity::class.java) // Declare intent variable
+        findViewById<Button>(R.id.btn_register).setOnClickListener{
+            val intent = Intent(this, SignUpActivity::class.java)
             startActivity(intent)
         }
+
+        findViewById<View>(R.id.login).setOnClickListener(onClickListener)
     }
 
     private var onClickListener =
@@ -57,11 +62,16 @@ class LoginActivity : AppCompatActivity() {
             mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this){ task: Task<AuthResult> ->
                     // If authenticate successful run the main activity
-                    if (task.isSuccessful) {
+                    if (task.isSuccessful && mAuth.currentUser?.isEmailVerified == true) {
                         Log.d(TAG, "signInWithEmail:success")
-                        val intent= Intent(this@LoginActivity, MainActivity::class.java)
+                        val intent= Intent(this, MainActivity::class.java)
                         startActivity(intent)
-                    } else {
+                    }
+                    else if (mAuth.currentUser?.isEmailVerified == false) {
+                        Toast.makeText(this, "Email not verified", Toast.LENGTH_SHORT).show()
+                        Log.w(TAG, "signInWithEmail:failure", task.exception)
+                    }
+                    else {
                         var emailClear = (findViewById<View>(R.id.username) as EditText)
                         var passwordClear = (findViewById<View>(R.id.password) as EditText)
                         emailClear.setText("")
@@ -70,7 +80,6 @@ class LoginActivity : AppCompatActivity() {
                         Log.w(TAG, "signInWithEmail:failure", task.exception)
                     }
                 }
-
             }
         }
 }

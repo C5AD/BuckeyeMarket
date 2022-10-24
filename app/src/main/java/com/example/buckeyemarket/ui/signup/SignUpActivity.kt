@@ -11,6 +11,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.example.buckeyemarket.R
+import com.example.buckeyemarket.ui.item.MyApplication
 import com.google.firebase.auth.FirebaseAuth
 import com.example.buckeyemarket.ui.login.LoginActivity
 import com.google.android.gms.tasks.Task
@@ -60,13 +61,22 @@ class SignUpActivity : AppCompatActivity() {
         if (email.isEmpty() || password.isEmpty() || confirmPw.isEmpty()) {
             startToast("Email or Password is empty.")
         } else {
-            if (email.endsWith("osu.edu") || email.endsWith("buckeyemail.osu.edu")) {
+            if (email.endsWith("osu.edu")) {
                 if (password.length < 8) {
                     startToast("Password must be longer than 7")
                 } else {
                     if (password == confirmPw) {
                         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{task : Task<AuthResult> ->
                             if (task.isSuccessful) {
+
+                                // add data with user uid.
+                                var datamap = hashMapOf(
+                                    "email" to email,
+                                    "phone" to "",
+                                    "name" to ""
+                                 )
+                                MyApplication.db.collection("users").document(task.result.user?.uid.toString()).set(datamap)
+
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success")
                                 // E-mail Confirmation
