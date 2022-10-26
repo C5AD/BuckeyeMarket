@@ -24,7 +24,6 @@ import com.google.firebase.firestore.FirebaseFirestore
 
 class UserSettingUpActivity : AppCompatActivity(){
     private lateinit var mAuth: FirebaseAuth
-    private lateinit var binding: ActivityLoginBinding
     lateinit var db: FirebaseFirestore
 
     companion object {
@@ -37,6 +36,7 @@ class UserSettingUpActivity : AppCompatActivity(){
 
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance()
+        db = FirebaseFirestore.getInstance()
         findViewById<View>(R.id.editButton).setOnClickListener(editClickListener)
         findViewById<View>(R.id.removeAcc).setOnClickListener(removeClickListener)
     }
@@ -75,24 +75,26 @@ class UserSettingUpActivity : AppCompatActivity(){
         if (email.isEmpty() && name.isEmpty() && venmo.isEmpty()) {
             startToast("Email or Password is empty.")
         }
-        else if (!email.endsWith("osu.edu")) {
+        else if (!email.endsWith("osu.edu") && name.isEmpty() && venmo.isEmpty()) {
             startToast("Email has to be end with osu.edu")
         } else {
             var uid = mAuth.currentUser?.uid;
             var userInfo = db.collection("users").document(uid.toString())
-            if (email.isNotEmpty()) {
+
+            if (email.isNotEmpty() && email.endsWith("osu.edu")) {
                 userInfo.update("email", email)
                 mAuth.currentUser?.updateEmail(email);
             }
+
             if (name.isNotEmpty()) {
                 userInfo.update("name", name)
             }
             if (venmo.isNotEmpty()) {
                 userInfo.update("venmoID", venmo)
             }
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
         }
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
     }
 
     private fun removeAcc() {
