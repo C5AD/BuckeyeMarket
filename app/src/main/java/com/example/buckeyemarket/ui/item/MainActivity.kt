@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.buckeyemarket.R
 import com.example.buckeyemarket.databinding.ActivityMainBinding
+import com.example.buckeyemarket.ui.userSetting.UserSettingUpActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +38,7 @@ class MainActivity : AppCompatActivity() {
         headerTextView.text = MyApplication.email.toString()
         // onClickListener to address the user to user info activity
         headerTextView.setOnClickListener{
-            val intent = Intent(this, AddItemActivity::class.java)
+            val intent = Intent(this, UserSettingUpActivity::class.java)
             startActivity(intent)
         }
 

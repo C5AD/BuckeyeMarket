@@ -41,17 +41,23 @@ class UserSettingUpActivity : AppCompatActivity(){
         findViewById<View>(R.id.removeAcc).setOnClickListener(removeClickListener)
     }
 
+    public override fun onStart() {
+        super.onStart()
+        // Check if user is signed in (non-null) and update UI accordingly.
+        var currentUser = this.mAuth.currentUser;
+    }
+
     var editClickListener =
         View.OnClickListener { v ->
             when (v.id) {
-                R.id.RegisterUser -> update()
+                R.id.editButton -> updateButton()
             }
         }
 
     var removeClickListener =
         View.OnClickListener { v ->
             when (v.id) {
-                R.id.RegisterUser -> removeAcc()
+                R.id.removeAcc -> removeAcc()
             }
         }
 
@@ -62,7 +68,7 @@ class UserSettingUpActivity : AppCompatActivity(){
         finish()
     }
 
-    private fun update() {
+    private fun updateButton() {
         var email = (findViewById<View>(R.id.emailEdit) as EditText).text.toString()
         val name = (findViewById<View>(R.id.nameEdit) as EditText).text.toString()
         val venmo = (findViewById<View>(R.id.venmoIDEdit) as EditText).text.toString()
@@ -85,7 +91,6 @@ class UserSettingUpActivity : AppCompatActivity(){
                 userInfo.update("venmoID", venmo)
             }
         }
-
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
