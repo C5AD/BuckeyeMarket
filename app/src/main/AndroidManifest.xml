@@ -16,6 +16,9 @@
         android:theme="@style/Theme.BuckeyeMarket"
         tools:targetApi="31"
         android:requestLegacyExternalStorage="true">
+        <activity android:name=".ui.userSetting.UserSettingUpActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
         <activity
             android:name=".ui.item.AddItemActivity"
             android:exported="true"

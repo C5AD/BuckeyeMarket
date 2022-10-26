@@ -20,4 +20,11 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="removeacc">RemoveAcc</string>
+    <string name="setting">Setting</string>
+    <string name="name">Name :</string>
+    <string name="venmo_id">Venmo ID :</string>
+    <string name="email">Email :</string>
+    <string name="edit">Edit</string>
+    <string name="buckeye_market">Buckeye Market</string>
 </resources>

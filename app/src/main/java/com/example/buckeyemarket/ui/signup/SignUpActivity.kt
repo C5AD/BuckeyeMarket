@@ -73,14 +73,15 @@ class SignUpActivity : AppCompatActivity() {
                                 var datamap = hashMapOf(
                                     "email" to email,
                                     "phone" to "",
-                                    "name" to ""
+                                    "name" to "",
+                                    "venmoID" to ""
                                  )
                                 MyApplication.db.collection("users").document(task.result.user?.uid.toString()).set(datamap)
 
                                 // Sign in success, update UI with the signed-in user's information
                                 Log.d(TAG, "createUserWithEmail:success")
                                 // E-mail Confirmation
-                                mAuth.getCurrentUser()?.sendEmailVerification()
+                                mAuth.currentUser?.sendEmailVerification()
                                     ?.addOnCompleteListener(OnCompleteListener<Void?> { task ->
                                         if (task.isSuccessful) {
                                             afterSignUpAlertMsg()

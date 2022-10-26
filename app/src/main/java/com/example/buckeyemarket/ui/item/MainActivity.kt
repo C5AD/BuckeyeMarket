@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
 
         val adapter = MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
-        // Set the tabs' text as Category..
+        // Set the tabs' text as Category..Í›
         TabLayoutMediator(binding.tabs, binding.viewpager) {
             tab, position -> tab.text = "Category ${position + 1}"
         }.attach()
