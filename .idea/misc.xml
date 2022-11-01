@@ -20,7 +20,18 @@
         <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/menu/menu_navigation.xml" value="0.31302083333333336" />
         <entry key="..\:app/src/main/res/layout/activity_login.xml" value="0.31302083333333336" />
         <entry key="..\:app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/background_chat_input.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_content_top.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_image.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_received_message.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_sent_message.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_info.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_send.xml" value="0.1735" />
         <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.13722826086956522" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11752786220871327" />
@@ -28,6 +39,9 @@
         <entry key="app/src/main/res/layout/fragment_one.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/fragment_three.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/fragment_two.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/item_container_received_message.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/item_container_recieved_message.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/item_container_sent_message.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/item_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/item_recyclerview.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.11752786220871327" />
