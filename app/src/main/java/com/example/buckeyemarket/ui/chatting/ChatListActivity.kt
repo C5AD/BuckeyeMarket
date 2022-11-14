@@ -22,28 +22,5 @@ import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.AuthResult
 import com.google.firebase.firestore.FirebaseFirestore
 
-class ChatActivity : AppCompatActivity() {
-
-    private lateinit var mAuth: FirebaseAuth
-    lateinit var db: FirebaseFirestore
-
-
-    companion object {
-        private const val TAG = "ChatActivity"
-    }
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_chat)
-        setListners()
-    }
-
-    private fun loadReceiverInfo() {
-
-    }
-
-    private fun setListners() {
-
-    }
-
+class ChatListActivity : AppCompatActivity() {
 }

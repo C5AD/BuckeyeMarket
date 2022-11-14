@@ -32,6 +32,7 @@
         <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.18125" />
         <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.13722826086956522" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/activity_chatlist.xml" value="0.240625" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11752786220871327" />
@@ -47,6 +48,7 @@
         <entry key="app/src/main/res/layout/item_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/item_recyclerview.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/navigation_header.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/user_layout.xml" value="0.240625" />
         <entry key="app/src/main/res/menu/menu_add.xml" value="0.18055555555555555" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.18055555555555555" />
         <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.18055555555555555" />
