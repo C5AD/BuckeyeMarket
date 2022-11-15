@@ -38,7 +38,7 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun loadReceiverInfo() {
-       db.
+       //db.
 
     }
 
