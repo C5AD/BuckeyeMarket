@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.item.ItemDetailActivity"
+    android:id="@+id/activity_item_detail">
+    <ImageView
+        android:id="@+id/item_detail_image"
+        android:layout_width="382dp"
+        android:layout_height="260dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <LinearLayout
+        android:id="@+id/item_detail_nav"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/item_detail_image"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Content"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/item_detail_content"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:layout_below="@+id/item_detail_nav"
+        android:text="item content" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="320dp"
+        android:text="Chat"
+        android:layout_below="@+id/item_detail_content"
+        />
+</RelativeLayout>

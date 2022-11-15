@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         var drawerMenu = binding.mainDrawerView.menu
-//        drawerMenu.getItem(0).title
 
         // Toggle that
         toggle = ActionBarDrawerToggle(this, binding.drawer,
@@ -72,6 +71,8 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
         }
+
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
