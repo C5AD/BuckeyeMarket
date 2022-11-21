@@ -19,6 +19,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.tasks.OnCompleteListener
 import com.example.buckeyemarket.databinding.ActivityLoginBinding
+import com.example.buckeyemarket.ui.chatting.ChatActivity
 import com.example.buckeyemarket.ui.item.MainActivity
 import com.example.buckeyemarket.ui.item.MyApplication
 import com.google.firebase.auth.FirebaseAuth
@@ -40,12 +41,18 @@ class UserAdapter(val context: Context, val userList: ArrayList<User>) :
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
-        mAuth = FirebaseAuth.getInstance()
-        db = FirebaseFirestore.getInstance()
 
         var currentUser = userList[position]
 
         holder.textName.text = currentUser.name
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, ChatActivity::class.java)
+
+            intent.putExtra("name", currentUser.name)
+            intent.putExtra("uid", FirebaseAuth.getInstance().currentUser?.uid)
+
+            context.startActivity(intent)
+        }
     }
 
     override fun getItemCount(): Int {

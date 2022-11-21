@@ -17,7 +17,7 @@
         />
 
     <TextView
-        android:id="@+id/textMessage"
+        android:id="@+id/textReceivedMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="4sp"
@@ -37,8 +37,8 @@
         android:layout_marginTop="4sp"
         android:textColor="@color/red_500"
         android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@id/textMessage"
-        app:layout_constraintTop_toBottomOf="@id/textMessage"
+        app:layout_constraintStart_toStartOf="@id/textReceivedMessage"
+        app:layout_constraintTop_toBottomOf="@id/textReceivedMessage"
         />
 
 
