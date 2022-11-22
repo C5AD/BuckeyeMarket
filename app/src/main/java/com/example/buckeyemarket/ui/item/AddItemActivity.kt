@@ -35,6 +35,14 @@ class AddItemActivity : AppCompatActivity() {
         mAuth = FirebaseAuth.getInstance()
         setContentView(binding.root)
         setSupportActionBar(binding.addToolbar)
+        val locateMe = binding.locateMeButton
+        // onClickListener when the user click the + button
+        if (locateMe != null) {
+            locateMe.setOnClickListener{
+                val intent = Intent(this, LocateMeActivity::class.java)
+                startActivity(intent)
+            }
+        }
     }
     // Launcher to get the image from the user and show it into add_image_view
     val requestLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
