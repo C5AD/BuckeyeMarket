@@ -12,7 +12,6 @@
         android:layout_height="0dp"
         android:layout_marginBottom="16sp"
         android:background="@drawable/background_content_top"
-        app:layout_constraintBottom_toTopOf="@id/layoutSend"
         app:layout_constraintTop_toBottomOf="parent"
         />
 
@@ -49,14 +48,11 @@
         android:id="@+id/chatRecyclerview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:overScrollMode="never"
-        android:padding="20sp"
-        android:visibility="gone"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="@id/viewBackground"
-        app:layout_constraintTop_toBottomOf="@id/imageBack" />
+        app:layout_constraintTop_toBottomOf="@id/imageBack"
+        app:layout_constraintVertical_bias="0.012"
+        tools:layout_editor_absoluteX="0dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -81,16 +77,16 @@
         app:tint="@color/black" />
 
     <FrameLayout
-        android:id="@+id/layoutSend"
         android:layout_width="54dp"
         android:layout_height="44dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="10dp"
         android:layout_marginBottom="12dp"
         android:background="@drawable/background_chat_input"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/layoutSend"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginStart="4dp"
@@ -120,7 +116,6 @@
         android:textSize="25sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/layoutSend"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

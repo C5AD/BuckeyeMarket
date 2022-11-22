@@ -33,6 +33,7 @@
         <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.13722826086956522" />
         <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24166666666666667" />
         <entry key="app/src/main/res/layout/activity_chatlist.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/activity_item_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19610507246376813" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.11752786220871327" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11752786220871327" />

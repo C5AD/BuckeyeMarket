@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.buckeyemarket.R
+import com.example.buckeyemarket.ui.chatting.ChatActivity
 import com.example.buckeyemarket.ui.item.MainActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.example.buckeyemarket.ui.login.LoginActivity
@@ -29,8 +30,6 @@ class UserInfoActivity : AppCompatActivity(){
         mAuth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
 
-        findViewById<View>(R.id.chatButton).setOnClickListener(chatClickListener)
-
     }
 
     public override fun onStart() {
@@ -39,13 +38,6 @@ class UserInfoActivity : AppCompatActivity(){
         var currentUser = this.mAuth.currentUser;
     }
 
-    var chatClickListener =
-        View.OnClickListener { v ->
-            when (v.id) {
-                R.id.chatButton -> chatStartButton()
-            }
-        }
-
     override fun onBackPressed() {
         super.onBackPressed()
         moveTaskToBack(true)
@@ -53,8 +45,6 @@ class UserInfoActivity : AppCompatActivity(){
         finish()
     }
 
-    private fun chatStartButton() {
-    }
 
     private fun startToast(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()

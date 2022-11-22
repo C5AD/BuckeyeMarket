@@ -5,4 +5,5 @@ class ItemData {
     var email: String? = null
     var content: String? = null
     var date: String? = null
+    var seller: String? = null
 }

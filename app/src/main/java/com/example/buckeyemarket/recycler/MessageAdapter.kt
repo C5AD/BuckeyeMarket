@@ -30,10 +30,10 @@ class MessageAdapter(val context: Context, val messageList: ArrayList<Message>):
 
         if (holder.javaClass == SentViewHolder::class.java) {
             val viewHolder = holder as SentViewHolder
-            holder.sentMessage.text = currentMessage.toString()
+            holder.sentMessage.text = currentMessage.message
         } else {
             val viewHolder = holder as ReceiveViewHolder
-            holder.receiveMessage.text = currentMessage.toString()
+            holder.receiveMessage.text = currentMessage.message
         }
     }
 

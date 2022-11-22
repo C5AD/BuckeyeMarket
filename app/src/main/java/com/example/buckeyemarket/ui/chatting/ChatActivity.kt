@@ -50,11 +50,10 @@ class ChatActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
 
-        val intent = Intent()
         val name = intent.getStringExtra("name")
-        val receiverUid = intent.getStringExtra("uid")
+        val receiverUid = intent.getStringExtra("receiverUID")
         val senderUid = FirebaseAuth.getInstance().currentUser?.uid
-        mDbRef = FirebaseDatabase.getInstance().getReference()
+        mDbRef = FirebaseDatabase.getInstance().reference
 
         senderRoom = receiverUid + senderUid
         receiverRoom = senderUid + receiverUid
@@ -64,6 +63,7 @@ class ChatActivity : AppCompatActivity() {
         chatRecyclerView = findViewById(R.id.chatRecyclerview)
         messageBox = findViewById(R.id.inputMessage)
         sendButton = findViewById(R.id.layoutSend)
+
         messageList = ArrayList()
         messageAdapter = MessageAdapter(this, messageList)
 
@@ -72,7 +72,7 @@ class ChatActivity : AppCompatActivity() {
 
 
         // adding data to recyclerView
-        mDbRef.child("chats").child(senderRoom!!).child("messages")
+        mDbRef.child("chats").child(senderRoom!!).child("message")
             .addValueEventListener(object: ValueEventListener{
                 override fun onDataChange(snapshot: DataSnapshot) {
 
