@@ -41,7 +41,7 @@ class UserSettingUpActivity : AppCompatActivity(){
     var editClickListener =
         View.OnClickListener { v ->
             when (v.id) {
-                R.id.chatButton -> updateButton()
+                R.id.editButton -> updateButton()
             }
         }
 

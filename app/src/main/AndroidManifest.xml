@@ -25,8 +25,8 @@
             android:name=".ui.item.ItemDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".ChatActivity"
-            android:exported="false" />
+            android:name=".ui.chatting.ChatActivity"
+            android:exported="true" />
         <activity
             android:name=".ui.user.UserSettingUpActivity"
             android:exported="true"

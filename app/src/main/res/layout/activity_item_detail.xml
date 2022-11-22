@@ -43,12 +43,11 @@
         android:text="item content" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/chatbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="320dp"
-        android:text="Chat"
         android:layout_below="@+id/item_detail_content"
-        />
+        android:layout_marginLeft="320dp"
+        android:layout_marginTop="30dp"
+        android:text="Chat" />
 </RelativeLayout>

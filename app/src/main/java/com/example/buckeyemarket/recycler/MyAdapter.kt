@@ -45,6 +45,8 @@ class MyAdapter (val context: Context, val itemList: MutableList<ItemData>) : Re
             val mActivity = context as Activity
             val intent = Intent(mActivity, ItemDetailActivity::class.java)
             intent.putExtra("docId", data.docId.toString())
+            intent.putExtra("receiverUID", data.seller.toString())
+            intent.putExtra("name", data.email.toString())
             mActivity.startActivity(intent)
         }
 

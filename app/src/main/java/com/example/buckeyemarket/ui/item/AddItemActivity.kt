@@ -98,7 +98,7 @@ class AddItemActivity : AppCompatActivity() {
             "email" to MyApplication.email,
             "content" to binding.addEditView.text.toString(),
             "date" to dateToString(Date()),
-            "seller" to mAuth.currentUser
+            "seller" to mAuth.currentUser?.uid
         )
         MyApplication.db.collection("allItems").add(data).addOnSuccessListener {
             uploadImage(it.id)
