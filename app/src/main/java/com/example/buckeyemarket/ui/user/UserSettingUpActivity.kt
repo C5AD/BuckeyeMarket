@@ -1,4 +1,4 @@
-package com.example.buckeyemarket.ui.userSetting
+package com.example.buckeyemarket.ui.user
 
 import android.content.Intent
 import android.os.Bundle
@@ -28,7 +28,7 @@ class UserSettingUpActivity : AppCompatActivity(){
         // Initialize Firebase Auth
         mAuth = FirebaseAuth.getInstance()
         db = FirebaseFirestore.getInstance()
-        findViewById<View>(R.id.chatButton).setOnClickListener(editClickListener)
+        findViewById<View>(R.id.editButton).setOnClickListener(editClickListener)
         findViewById<View>(R.id.removeAcc).setOnClickListener(removeClickListener)
     }
 

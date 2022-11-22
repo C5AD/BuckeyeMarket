@@ -14,6 +14,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.buckeyemarket.R
 import com.example.buckeyemarket.databinding.ActivityAddItemBinding
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.storage.StorageReference
 import java.io.File
 import java.text.SimpleDateFormat
@@ -25,11 +26,13 @@ class AddItemActivity : AppCompatActivity() {
 
     lateinit var filePath: String
     lateinit var binding: ActivityAddItemBinding
+    private lateinit var mAuth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAddItemBinding.inflate(layoutInflater)
+        mAuth = FirebaseAuth.getInstance()
         setContentView(binding.root)
         setSupportActionBar(binding.addToolbar)
     }
@@ -86,7 +89,8 @@ class AddItemActivity : AppCompatActivity() {
         val data = mapOf(
             "email" to MyApplication.email,
             "content" to binding.addEditView.text.toString(),
-            "date" to dateToString(Date())
+            "date" to dateToString(Date()),
+            "seller" to mAuth.currentUser
         )
         MyApplication.db.collection("allItems").add(data).addOnSuccessListener {
             uploadImage(it.id)

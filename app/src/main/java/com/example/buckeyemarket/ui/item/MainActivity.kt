@@ -13,7 +13,7 @@ import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.buckeyemarket.R
 import com.example.buckeyemarket.databinding.ActivityMainBinding
-import com.example.buckeyemarket.ui.userSetting.UserSettingUpActivity
+import com.example.buckeyemarket.ui.user.UserSettingUpActivity
 import com.google.android.material.tabs.TabLayoutMediator
 
 class MainActivity : AppCompatActivity() {
