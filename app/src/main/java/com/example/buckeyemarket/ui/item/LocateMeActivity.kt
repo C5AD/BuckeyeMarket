@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContentProviderCompat.requireContext
@@ -52,6 +53,8 @@ class LocateMeActivity : AppCompatActivity(){
             }
             googleMap.isMyLocationEnabled = true
             val locationResult = fusedLocationProviderClient.lastLocation
+            googleMap.setMyLocationEnabled(true);
+            googleMap.getUiSettings().setMyLocationButtonEnabled(false);
             locationResult.addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Set the map's camera position to the current location of the device.
