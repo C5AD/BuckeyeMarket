@@ -93,13 +93,21 @@ class AddItemActivity : AppCompatActivity() {
     }
     // Function to save the contents that the user want to upload into Firebase database
     private fun saveStore() {
-
+        var category = ""
+        if (binding.categoryItem.isChecked) {
+            category = binding.categoryItem.text.toString()
+        }
+        if (binding.categoryHousing.isChecked) {
+            category = binding.categoryHousing.text.toString()
+        }
         val data = mapOf(
             "email" to MyApplication.email,
             "content" to binding.addEditView.text.toString(),
+            "category" to category,
             "date" to dateToString(Date()),
             "seller" to mAuth.currentUser?.uid
         )
+
         MyApplication.db.collection("allItems").add(data).addOnSuccessListener {
             uploadImage(it.id)
         }.addOnFailureListener {

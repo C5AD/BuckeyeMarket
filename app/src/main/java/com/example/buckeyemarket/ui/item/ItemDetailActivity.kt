@@ -36,6 +36,7 @@ class ItemDetailActivity : AppCompatActivity() {
             val item = documentSnapShot.toObject(ItemData::class.java)
             binding.run {
                 itemDetailContent.text = item?.content
+                itemCategory.text = "item Category: "+item?.category
             }
         }
 
