@@ -55,8 +55,13 @@ class MainActivity : AppCompatActivity() {
         val adapter = MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
         // Set the tabs' text as Category..Í›
+        val itemList = mutableListOf<String>()
+        itemList.add("All")
+        itemList.add("item")
+        itemList.add("Housing")
         TabLayoutMediator(binding.tabs, binding.viewpager) {
-            tab, position -> tab.text = "Category ${position + 1}"
+            tab, position -> tab.text = itemList.get(position)
+//            "Category ${position + 1}"
         }.attach()
         // Click listener when the user click the menu items
         binding.mainDrawerView.setNavigationItemSelectedListener {

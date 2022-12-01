@@ -25,7 +25,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:layout_below="@+id/add_toolbar"
-        android:layout_marginTop="100dp">
+        android:layout_marginTop="50dp">
 
         <ImageView
             android:id="@+id/addImageView"
@@ -33,13 +33,30 @@
             android:layout_height="200dp"
             android:background="#EEEEEE"
             android:scaleType="fitXY"/>
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select the category"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            />
+        <CheckBox
+            android:id="@+id/category_item"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "item"
+            android:textColor="@color/red_200"/>
+        <CheckBox
+            android:id="@+id/category_housing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text = "housing"
+            android:textColor="@color/red_200"/>
         <EditText
             android:id="@+id/addEditView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:hint="내용 입력해 주세요"
+            android:hint="Please write a description"
             android:gravity="left|top"/>
 
     </LinearLayout>
