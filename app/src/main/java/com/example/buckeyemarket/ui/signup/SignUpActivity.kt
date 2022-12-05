@@ -134,4 +134,10 @@ object SignUpTest{
         }
         return false
     }
+    fun validateLengthPassword(password: String): Boolean {
+        if (password.length < 7) {
+            return false
+        }
+        return true
+    }
 }

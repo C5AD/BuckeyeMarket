@@ -20,7 +20,7 @@ internal class SignUpActivityEmailDomainTest {
     }
 
     @Test
-    fun emailTestCase3_ossu_returnFalse() {
+    fun emailTestCase3_oosu_returnFalse() {
         val result = SignUpTest.validateRegistrationInput("test@ossu.edu")
         assertFalse(result)
     }
