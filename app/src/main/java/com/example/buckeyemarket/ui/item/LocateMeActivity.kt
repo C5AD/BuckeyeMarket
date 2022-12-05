@@ -85,3 +85,12 @@ class LocateMeActivity : AppCompatActivity(){
     }
 
 }
+
+object LocateMeTest{
+    fun validateAddress(address: String) : Boolean {
+        if (address.isEmpty()) {
+            return false
+        }
+        return true
+    }
+}
