@@ -2,7 +2,6 @@ package com.example.buckeyemarket.ui.item
 
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -10,6 +9,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.buckeyemarket.R
@@ -27,7 +27,6 @@ class AddItemActivity : AppCompatActivity() {
     lateinit var filePath: String
     lateinit var binding: ActivityAddItemBinding
     private lateinit var mAuth: FirebaseAuth
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -54,7 +53,7 @@ class AddItemActivity : AppCompatActivity() {
                 .centerCrop()
                 .into(binding.addImageView)
 
-            val cursor = contentResolver.query(it.data?.data as Uri, arrayOf<String>(MediaStore.Images.Media.DATA), null, null, null);
+            val cursor = contentResolver.query(it.data?.data as Uri, arrayOf<String>(MediaStore.Images.Media.DATA), null, null, null)
             cursor?.moveToFirst().let {
                 filePath = cursor?.getString(0) as String
             }
@@ -94,18 +93,21 @@ class AddItemActivity : AppCompatActivity() {
     // Function to save the contents that the user want to upload into Firebase database
     private fun saveStore() {
         var category = ""
+        var locateUserAddress = LocateMeActivity()
         if (binding.categoryItem.isChecked) {
             category = binding.categoryItem.text.toString()
         }
         if (binding.categoryHousing.isChecked) {
             category = binding.categoryHousing.text.toString()
         }
+
         val data = mapOf(
             "email" to MyApplication.email,
             "content" to binding.addEditView.text.toString(),
             "category" to category,
             "date" to dateToString(Date()),
-            "seller" to mAuth.currentUser?.uid
+            "seller" to mAuth.currentUser?.uid,
+            //"location" to address
         )
 
         MyApplication.db.collection("allItems").add(data).addOnSuccessListener {

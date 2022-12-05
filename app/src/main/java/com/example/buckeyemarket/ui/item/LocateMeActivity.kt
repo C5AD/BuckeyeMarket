@@ -1,14 +1,11 @@
 package com.example.buckeyemarket.ui.item
 
 import android.Manifest
-import android.content.Context
 import android.content.pm.PackageManager
 import android.location.Geocoder
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
-import androidx.core.content.ContentProviderCompat.requireContext
 import com.example.buckeyemarket.R
 import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
@@ -16,7 +13,6 @@ import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.LatLng
-import java.security.AccessController.getContext
 import java.util.*
 
 /**
@@ -25,6 +21,7 @@ import java.util.*
 class LocateMeActivity : AppCompatActivity(){
     lateinit var mapFragment : SupportMapFragment
     lateinit var googleMap : GoogleMap
+    //var addressUser = Geocoder(this, Locale.getDefault()).getFromLocation(10.0,10.0, 1)
 
     override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
@@ -53,8 +50,7 @@ class LocateMeActivity : AppCompatActivity(){
             }
             googleMap.isMyLocationEnabled = true
             val locationResult = fusedLocationProviderClient.lastLocation
-            googleMap.setMyLocationEnabled(true);
-            googleMap.getUiSettings().setMyLocationButtonEnabled(false);
+            googleMap.uiSettings.isMyLocationButtonEnabled = false
             locationResult.addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     // Set the map's camera position to the current location of the device.
@@ -70,11 +66,18 @@ class LocateMeActivity : AppCompatActivity(){
                         )
                     }
                     val geoCoder = Geocoder(this, Locale.getDefault())
-                    val address = geoCoder.getFromLocation(lastKnownLocation.latitude,lastKnownLocation.longitude, 1)
+                    val addressUser = geoCoder.getFromLocation(lastKnownLocation.latitude,lastKnownLocation.longitude, 1)
+                    /*val address: String = addressUser[0].getAddressLine(0)
+                    val city: String = addressUser[0].getLocality()
+                    val state: String = addressUser[0].getAdminArea()
+                    val country: String = addressUser[0].getCountryName()
+                    val postalCode: String = addressUser[0].getPostalCode()
+*/
                     val data = mapOf(
-                        "Location" to address.toString()
+                        "Location" to addressUser.toString()
                     )
                     MyApplication.db.collection("UserLocation").add(data)
+
                 }
             }
 
