@@ -3,10 +3,57 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/drawable/ic_launcher_background.xml" value="0.547" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_add_item.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_drawer.xml" value="0.2984375" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_item_detail.xml" value="0.2692502532928065" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_login.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/activity_sign_up.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/fragment_one.xml" value="0.25" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/fragment_three.xml" value="0.5390625" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/fragment_two.xml" value="0.5390625" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/item_main.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/item_recyclerview.xml" value="0.5536458333333333" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/layout/navigation_header.xml" value="0.31302083333333336" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/menu/menu_add.xml" value="0.31197916666666664" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/menu/menu_main.xml" value="0.5" />
+        <entry key="..\:/Users/Jay Kim/AndroidStudioProjects/BuckeyeMarket/app/src/main/res/menu/menu_navigation.xml" value="0.31302083333333336" />
         <entry key="..\:app/src/main/res/layout/activity_login.xml" value="0.31302083333333336" />
         <entry key="..\:app/src/main/res/layout/activity_sign_up.xml" value="0.33" />
-        <entry key="..\:app/src/main/res/layout/activity_sign_upz.xml" value="0.31302083333333336" />
+        <entry key="app/src/main/res/drawable/background_chat_input.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_content_top.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_image.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_received_message.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/background_sent_message.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_back.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_info.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.1735" />
+        <entry key="app/src/main/res/drawable/ic_send.xml" value="0.1735" />
+        <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.18125" />
+        <entry key="app/src/main/res/layout/activity_add_item.xml" value="0.13722826086956522" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/activity_chatlist.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/activity_item_detail.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19610507246376813" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/activity_userInfo.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/activity_userinfo.xml" value="0.25156541907269026" />
+        <entry key="app/src/main/res/layout/activity_usersetting.xml" value="0.21638475501019022" />
+        <entry key="app/src/main/res/layout/fragment_one.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/fragment_three.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/fragment_two.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/item_container_received_message.xml" value="0.24166666666666667" />
+        <entry key="app/src/main/res/layout/item_container_recieved_message.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/item_container_sent_message.xml" value="0.240625" />
+        <entry key="app/src/main/res/layout/item_main.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/item_recyclerview.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/navigation_header.xml" value="0.11752786220871327" />
+        <entry key="app/src/main/res/layout/user_layout.xml" value="0.240625" />
+        <entry key="app/src/main/res/menu/menu_add.xml" value="0.18055555555555555" />
+        <entry key="app/src/main/res/menu/menu_main.xml" value="0.18055555555555555" />
+        <entry key="app/src/main/res/menu/menu_navigation.xml" value="0.18055555555555555" />
       </map>
     </option>
   </component>
