@@ -25,7 +25,7 @@ class SignUpActivity : AppCompatActivity() {
         private const val TAG = "SignUpActivity"
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+    public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sign_up)
 
@@ -124,5 +124,14 @@ class SignUpActivity : AppCompatActivity() {
             }
         val alert = builder.create()
         alert.show()
+    }
+}
+
+object SignUpTest{
+    fun validateRegistrationInput(email: String) : Boolean {
+        if (email.endsWith("osu.edu")) {
+            return true
+        }
+        return false
     }
 }
